@@ -1,17 +1,5 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import { View, Text } from "react-juce";
-
-class App extends Component {
-  render() {
-    return (
-      <View {...styles.container}>
-        <View {...styles.content}>
-          <Text {...styles.text}>Hello from React.js!</Text>
-        </View>
-      </View>
-    );
-  }
-}
 
 const styles = {
   container: {
@@ -30,5 +18,17 @@ const styles = {
     color: "ff626262",
   },
 };
+
+class App extends Component {
+  render() {
+    return (
+      <View {...styles.container}>
+        <View {...styles.content}>
+          <Text {...styles.text}>Hello from React.js!</Text>
+        </View>
+      </View>
+    );
+  }
+}
 
 export default App;
