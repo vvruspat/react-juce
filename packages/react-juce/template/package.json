@@ -5,7 +5,7 @@
   "dependencies": {
     "@types/react": "^18.0.21",
     "react": "^18.2.0",
-    "react-juce": "git+https://github.com/vvruspat/react-juce.git#dev",
+    "react-juce": "git+https://github.com/vvruspat/react-juce.git",
     "ts-loader": "^9.4.1"
   },
   "devDependencies": {
