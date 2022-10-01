@@ -1,5 +1,5 @@
 module.exports = {
-  entry: "./src/index.js",
+  entry: "./src/index.tsx",
   output: {
     path: __dirname + "/build/js",
     filename: "main.js",
@@ -11,15 +11,28 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.tsx?$/,
+        use: {
+          loader: "ts-loader",
+          options: {
+            compilerOptions: {
+              noEmit: false,
+            },
+          },
+        },
         exclude: /node_modules/,
-        use: ["babel-loader"],
       },
       {
         test: /\.svg$/,
-        exclude: /node_modules/,
-        use: ["svg-inline-loader"],
+        use: [
+          {
+            loader: "raw-loader",
+          },
+        ],
       },
     ],
+  },
+  resolve: {
+    extensions: [".ts", ".tsx", ".js", ".jsx"],
   },
 };
